@@ -50,9 +50,9 @@ export default function InviteEmail(props: InviteEmailProps) {
             <Section className="flex justify-center">
               <Button
                 href={
-                  process.env.IS_DEV
-                    ? `http://localhost:5173/invite/${inviteID}`
-                    : `${process.env.FRONTEND_URL}/invite/${inviteID}`
+                  !process.env.IS_DEV
+                    ? `${process.env.FRONTEND_URL}/invite/${inviteID}`
+                    : `http://localhost:5173/invite/${inviteID}`
                 }
                 className={
                   "bg-purple-500 rounded text-white text-[12px] px-4 py-2 text-lg font-semibold no-underline text-center"
