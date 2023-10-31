@@ -10,3 +10,6 @@ jspm_packages
 
 # environment variables
 .env
+
+# React email directory
+.react-email
